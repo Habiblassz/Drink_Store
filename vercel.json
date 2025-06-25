@@ -12,5 +12,5 @@
 			"dest": "/server/index.js"
 		}
 	],
-	"buildCommand": "npm install --prefix server && npm install --prefix app && npm run build --prefix app"
+	"buildCommand": "npm install --prefix server && npm install --prefix cart && npm run build --prefix cart"
 }
