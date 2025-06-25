@@ -5,8 +5,11 @@ var cors = require("cors");
 
 const app = express();
 app.use(cors());
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "../app/dist")));
 app.use(express.json());
+
+const port = process.env.PORT || 4000;
 
 app.post("/checkout", async (req, res) => {
 	console.log(req.body);
@@ -96,4 +99,4 @@ app.post("/checkout", async (req, res) => {
 // 	}
 // });
 
-app.listen(4000, () => console.log("listening on port 4000"));
+app.listen(port, () => console.log(`Server running on port ${port}`));
