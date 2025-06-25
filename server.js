@@ -3,11 +3,17 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const express = require("express");
 var cors = require("cors");
 
+const __dirname = import.meta.dirname;
+
 const app = express();
 app.use(cors());
 // app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "../app/dist")));
 app.use(express.json());
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../app/dist", "index.html"));
+});
 
 const port = process.env.PORT || 4000;
 
