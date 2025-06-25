@@ -75,7 +75,7 @@ const productsArray = [
 		price: 6.49,
 		category: "hot",
 		image:
-			"https://images.unsplash.com/photo-1567130000461-9a4f6a2a8e3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+			"https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
 		description:
 			"Spiced black tea steamed with milk, combining cinnamon, cardamom, and ginger for a warming drink.",
 	},
@@ -85,7 +85,7 @@ const productsArray = [
 		price: 7.99,
 		category: "hot",
 		image:
-			"https://images.unsplash.com/photo-1559538339-5f2565f32b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+			"https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
 		description:
 			"Premium ceremonial-grade matcha whisked to perfection with hot water or milk.",
 	},
@@ -95,7 +95,7 @@ const productsArray = [
 		price: 5.99,
 		category: "cold",
 		image:
-			"https://images.unsplash.com/photo-1593229874334-90b8e9dd83f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+			"https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
 		description:
 			"Smooth cold-brewed coffee concentrate served over ice, less acidic than traditional iced coffee.",
 	},

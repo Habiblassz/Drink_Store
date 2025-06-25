@@ -24,19 +24,21 @@ function NavbarComponent() {
 		setTimeout(() => setShowToast(false), 3000);
 	};
 
-	const SERVER_URL = `${window.location.protocol}//${window.location.host}`;
+	const SERVER_URL = `${window.origin}`;
 
 	const checkout = async () => {
 		setIsCheckingOut(true);
 		try {
-			const response = await fetch(`${SERVER_URL}/checkout`, {
+			const response = await fetch(`http://localhost:4000/checkout`, {
 				method: "POST",
+				mode: "cors",
 				headers: {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({ items: cart.items }),
 			});
 
+			console.log(SERVER_URL);
 			const data = await response.json();
 
 			if (data.url) {
