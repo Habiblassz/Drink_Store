@@ -24,12 +24,12 @@ function NavbarComponent() {
 		setTimeout(() => setShowToast(false), 3000);
 	};
 
-	const SERVER_URL = `${window.origin}`;
+	const SERVER_URL = `${window.location.protocol}//${window.location.hostname}`;
 
 	const checkout = async () => {
 		setIsCheckingOut(true);
 		try {
-			const response = await fetch(`http://localhost:4000/checkout`, {
+			const response = await fetch(`${SERVER_URL}:4000/checkout`, {
 				method: "POST",
 				mode: "cors",
 				headers: {

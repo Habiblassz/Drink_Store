@@ -51,7 +51,7 @@ export default function Store() {
 	return (
 		<div className="py-5 store-page">
 			<div className="text-center mb-5">
-				<h1 className="fw-bold">Welcome to Beverage Boutique</h1>
+				<h1 className="fw-bold">Welcome to our Beverage Boutique</h1>
 				<p className="lead text-muted">
 					Discover our premium selection of drinks
 				</p>
