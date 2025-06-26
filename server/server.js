@@ -9,11 +9,11 @@ app.use(express.static("public"));
 app.use(express.json());
 
 const port = process.env.PORT || 4000;
-const clientUrl = process.env.CLIENT_URL || `http://localhost:${port}`;
 
 app.post("/checkout", async (req, res) => {
 	console.log(req.body);
-	const client = `${req.protocol}://${req.get("host")}`;
+	const client = process.env.CLIENT_URL || "http://localhost:5173";
+	console.log("Client URL:", client);
 
 	const items = req.body.items;
 	let lineItems = [];

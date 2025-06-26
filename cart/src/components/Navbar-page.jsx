@@ -38,7 +38,6 @@ function NavbarComponent() {
 				body: JSON.stringify({ items: cart.items }),
 			});
 
-			console.log(SERVER_URL);
 			const data = await response.json();
 
 			if (data.url) {
