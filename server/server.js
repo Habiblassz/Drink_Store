@@ -9,11 +9,11 @@ app.use(express.static("public"));
 app.use(express.json());
 
 const port = process.env.PORT || 4000;
-const serverUrl = process.env.SERVER_URL || `http://localhost:${port}`;
+const clientUrl = process.env.CLIENT_URL || `http://localhost:${port}`;
 
 app.post("/checkout", async (req, res) => {
 	console.log(req.body);
-	console.log(serverUrl);
+	const client = `${req.protocol}://${req.get("host")}`;
 
 	const items = req.body.items;
 	let lineItems = [];
@@ -27,8 +27,8 @@ app.post("/checkout", async (req, res) => {
 	const session = await stripe.checkout.sessions.create({
 		line_items: lineItems,
 		mode: "payment",
-		success_url: `${serverUrl}/success`,
-		cancel_url: `${serverUrl}/cancel`,
+		success_url: `${client}/success`,
+		cancel_url: `${client}/cancel`,
 	});
 
 	res.send(
