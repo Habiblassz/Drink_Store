@@ -4,7 +4,7 @@
 	"main": "server.js",
 	"scripts": {
 		"postinstall": "cd ../cart && npm install && npm run build",
-		"start": "node index.js"
+		"start": "node server.js"
 	},
 	"keywords": [],
 	"author": "",
