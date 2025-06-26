@@ -53,33 +53,6 @@ function NavbarComponent() {
 		}
 	};
 
-	// const checkout = async () => {
-	// 	setIsCheckingOut(true);
-	// 	try {
-	// 		const response = await fetch("http://localhost:4000/checkout", {
-	// 			method: "POST",
-	// 			headers: {
-	// 				"Content-Type": "application/json",
-	// 			},
-	// 			body: JSON.stringify({ items: cart.items }),
-	// 		});
-
-	// 		const data = await response.json();
-
-	// 		if (data.url) {
-	// 			// Store the session ID in localStorage
-	// 			localStorage.setItem("currentOrderSessionId", data.sessionId);
-	// 			window.location.assign(data.url);
-	// 		} else {
-	// 			throw new Error("Checkout failed");
-	// 		}
-	// 	} catch (error) {
-	// 		setIsCheckingOut(false);
-	// 		showNotification("Checkout failed. Please try again.");
-	// 		console.error("Checkout error:", error);
-	// 	}
-	// };
-
 	return (
 		<div
 			style={{
