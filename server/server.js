@@ -8,6 +8,14 @@ app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, "../cart/dist")));
+
+// Handle requests by serving index.html for all routes
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../cart/dist", "index.html"));
+});
+
 const port = process.env.PORT || 4000;
 
 app.post("/checkout", async (req, res) => {

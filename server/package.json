@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"main": "server.js",
 	"scripts": {
-		"start": "nodemon server.js"
+		"postinstall": "cd ../cart && npm install && npm run build",
+		"start": "node index.js"
 	},
 	"keywords": [],
 	"author": "",
