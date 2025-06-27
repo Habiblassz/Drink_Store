@@ -1,16 +1,11 @@
 {
 	"version": 2,
 	"builds": [
-		{
-			"src": "server/server.js",
-			"use": "@vercel/node"
-		}
+		{ "src": "package.json", "use": "@vercel/static-build" },
+		{ "src": "api/**/*.js", "use": "@vercel/node" }
 	],
 	"routes": [
-		{
-			"src": "/(.*)",
-			"dest": "/server/server.js"
-		}
-	],
-	"buildCommand": "npm install --prefix server && npm install --prefix cart && npm run build --prefix cart"
+		{ "src": "/api/(.*)", "dest": "/api/$1" },
+		{ "src": "/(.*)", "dest": "/index.html" }
+	]
 }
