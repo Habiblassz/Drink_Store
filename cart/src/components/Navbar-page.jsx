@@ -31,6 +31,7 @@ function NavbarComponent() {
 		try {
 			const response = await fetch(`${SERVER_URL}:4000/checkout`, {
 				method: "POST",
+				mode: "cors",
 				headers: {
 					"Content-Type": "application/json",
 				},
