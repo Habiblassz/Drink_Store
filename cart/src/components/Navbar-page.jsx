@@ -24,10 +24,12 @@ function NavbarComponent() {
 		setTimeout(() => setShowToast(false), 3000);
 	};
 
+	const SERVER_URL = `${window.location.protocol}//${window.location.hostname}`;
+
 	const checkout = async () => {
 		setIsCheckingOut(true);
 		try {
-			const response = await fetch("/api/checkout", {
+			const response = await fetch(`${SERVER_URL}:4000/checkout`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
